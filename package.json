@@ -6,7 +6,7 @@
   "scripts": {
     "test": "set NODE_ENV=test&& karma start",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
-    "start": "npm run build&& node server.js"
+    "start": "npm run build && node server.js"
   },
   "author": "Daniel Goldberg",
   "license": "MIT",
