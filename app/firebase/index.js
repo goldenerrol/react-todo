@@ -8,7 +8,6 @@ try {
       storageBucket: process.env.STORAGE_BUCKET
     };
 
-    console.log(config);
     firebase.initializeApp(config);
 } catch (e) {
 
