@@ -2,13 +2,13 @@ import firebase from 'firebase';
 
 try {
   var config = {
-      apiKey: "AIzaSyCbgJm-qLcTSQSHweFhlQT8DjYLnQAJlhs",
-      authDomain: "codeberg-todo-app.firebaseapp.com",
-      databaseURL: "https://codeberg-todo-app.firebaseio.com",
-      storageBucket: "codeberg-todo-app.appspot.com",
-      messagingSenderId: "174170138464"
+      apiKey: process.env.API_KEY,
+      authDomain: process.env.AUTH_DOMAIN,
+      databaseURL: process.env.DATABASE_URL,
+      storageBucket: process.env.STORAGE_BUCKET
     };
 
+    console.log(config);
     firebase.initializeApp(config);
 } catch (e) {
 
