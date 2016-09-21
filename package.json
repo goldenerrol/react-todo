@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "set NODE_ENV=test&& karma start",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "build": "webpack",
     "start": "npm run build && node server.js"
   },
   "author": "Daniel Goldberg",
