@@ -11,9 +11,11 @@ import router from 'app/router/';
 //check if user arguement is present. true = logged in, not present = logged out
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
+    store.dispatch(actions.login(user.uid));
     //swap in new URL when theyre logged in
     hashHistory.push('/todos')
   } else {
+    store.dispatch(actions.logout());
     hashHistory.push('/');
   }
 });
