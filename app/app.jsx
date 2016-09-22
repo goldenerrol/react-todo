@@ -12,6 +12,7 @@ import router from 'app/router/';
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     store.dispatch(actions.login(user.uid));
+    store.dispatch(actions.startAddTodos());
     //swap in new URL when theyre logged in
     hashHistory.push('/todos')
   } else {
@@ -19,8 +20,6 @@ firebase.auth().onAuthStateChanged((user) => {
     hashHistory.push('/');
   }
 });
-
-store.dispatch(actions.startAddTodos());
 
 // Load foundation
 $(document).foundation();
