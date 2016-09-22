@@ -27,7 +27,7 @@ firebaseRef.set({
 var todosRef = firebaseRef.child('todos');
 
 todosRef.on('child_added', (snapshot) => {
-  console.log('child added', snapshot.key, snapshot.val());
+  //console.log('child added', snapshot.key, snapshot.val());
 });
 
 var newTodoRef = todosRef.push({
